@@ -2,7 +2,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 
 function MyNavbar() {
     return (
-        <Navbar bg="dark" variant="dark" expand="ig" className="stick-top shadow-sn">
+        <Navbar bg="dark" variant="dark" expand="Ig" className="stick-top shadow-sn">
             <Container>
                 <Navbar.Brand href="/">BeritaOline</Navbar.Brand>
                 <Nav className="me-auto">
