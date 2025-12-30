@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NewsCard from "../Components/NewsCard";
 import { fetchNews } from "../Services/newsSarvices";
 import { Container, Row, Col } from "react-bootstrap";
-import "../styles/App.css";
+import "./styles/App.css";
 
 function Home() {
     const [newsList, setNewsList] = useState([]);
