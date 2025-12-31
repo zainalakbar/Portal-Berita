@@ -5,7 +5,9 @@ export async function fetchNews(category = "") {
     : `/api/news`;
 
   const response = await fetch(url);
-  const data = await response.json();
+    const data = await response.json();
+  console.log("RESPON API:", data);
+  console.log(data);
   return data; 
 
 } catch (error) {

@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 
-function NewsCard({ tittle, description, image, url }) {
-    console.log("Render NewsCard:", { tittle, description, image, url });
+function NewsCard({ title, description, image, url }) {
+    console.log("Render NewsCard:", { title, description, image, url }) ;
     return (
 
         <Card className="h-100 shadow-sm news-card">
@@ -11,7 +11,7 @@ function NewsCard({ tittle, description, image, url }) {
             style={{ height: "250px", objectFit: "cover"}}
             />
             <Card.Body>
-                <Card.Tittle className="fw-bold text-truncate">{tittle}</Card.Tittle>
+                <Card.Title className="fw-bold text-truncate">{title}</Card.Title>
                 <Card.Text className="text-muted" style={{ fontSize: "0.9rem" }}>
                     {description}
                 </Card.Text>
