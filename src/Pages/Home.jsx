@@ -9,17 +9,14 @@ function Home() {
 
     useEffect(() => {
         async function getNews() {
-            const news = await fetchNews(); // ambil berita umum
+            try {
+            const news = await fetchNews(); // ambil data servis
+            console.log("Berita yang di terima:", news);  //debug
             setNewsList(news);
+        } catch (err) {
+            console.error("Gagal ambil berita:", err);
         }
-        getNews();
-    }, []);
-    useEffect(() => {
-        async function getNews() {
-            const news = await fetchNews();
-            console.log("Berita Yang di Terima:", news); // debug
-            setNewsList(news);
-        }
+    }
         getNews();
     }, []);
 
@@ -27,18 +24,21 @@ function Home() {
         <Container fluid className="news-container mt-4">
             <h1 className="text-center fw-bold mb-4">Berita Terkini Indonesia</h1>
             <Row className="g-4">
-                {newsList
-                .filter(news => news.tittle && news.description && news.urlToImage)
-                .map((news, index) => (
-                    <Col key={index} xs={12} sm={6} lg={3}>
-                        <NewsCard
-                        tittle={news.tille}
-                        description={news.description}
-                        image={news.image}
-                        url={news.url} 
-                            />
-                    </Col>
-                ))}
+                {newsList && newsList.length > 0 ? (
+                    newsList.map((news, index) => (
+                        <Col key={index} xs={12} sm={6} md={4} lg={3}>
+                            <NewsCard
+                            tittle={news.tittle}
+                            description={news.description}
+                            image={news.urlToImage}
+                            url={news.url}
+                             />
+                        </Col>
+                    ))
+
+                ) : (
+                    <p className="text-center">Belum ada berita yang tersedia.</p>
+                )}
             </Row>
         </Container>
     );

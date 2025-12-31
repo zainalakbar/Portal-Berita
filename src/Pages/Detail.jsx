@@ -6,7 +6,7 @@ function Detail() {
     return (
         <div className="container mt-4">
             <h2>Detail Berita { id }</h2>
-            <p>Isi DEtail Berita Dengan { id }</p>
+            <p>Isi DEtail Berita Dengan ID { id } ditampilkan di sini...</p>
         </div>
     );
 }

@@ -4,7 +4,7 @@ function MyNavbar() {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" className="stick-top shadow-sn">
             <Container>
-                <Navbar.Brand href="/">BeritaOline</Navbar.Brand>
+                <Navbar.Brand href="/">BeritaOnline</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/katagori/teknologi">Teknologi</Nav.Link>
