@@ -30,7 +30,7 @@ function Home() {
               <NewsCard
                 title={news.title} // ✅ perbaikan typo
                 description={news.description}
-                image={news.urlToImage || "fallback.jpg"} // ✅ fallback gambar
+                src={news.urlToImage || Image} // ✅ fallback gambar
                 url={news.url}
               />
             </Col>
